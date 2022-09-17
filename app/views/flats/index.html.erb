@@ -1,25 +1,40 @@
 <div class="container">
 
-  <div class="row mt-5 mb-3">
-    <h2 >All our <%= @flats.count %> flats</h2>
+  <div class="row mt-5 mb-3 ms-5">
+    <h2 >All our flats &#40;<%=@flats.count %>&#41;</h2>
   </div>
 
-  <div class="row">
-    <%= link_to "Create a new flat", new_flat_path %>
+  <div class="row mt-3 ms-5">
+    <% @flats.each do |flat| %>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <%= link_to flat_path(flat), class: "card-flat" do %>
+            <div class="card" style="width: 18rem; height: 22rem;">
+              <%= image_tag "flat.jpg" %>
+              <div class="card-body">
+                <h5 class="card-title"><%=flat.name %></h5>
+                <p><i class="fa-solid fa-location-dot"></i> <%= flat.address %></p>
+                <div class="d-flex justify-content-around">
+                  <p class="card-text"><%= flat.price_per_night %> <i class="fa-solid fa-euro-sign"></i></p>
+                  <%#= link_to "See more", flat_path(flat), class: "btn btn-dark" %>
+                  <p class="card-text"><i class="fa-solid fa-user-group"></i> - <%= flat.number_of_guests %></p>
+                </div>
+                <div class="d-flex justify-content-around">
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
+
+  <div class="row mt-3 mb-3 d-flex justify-content-center">
+        <%= link_to "Create a new flat", new_flat_path, class: "btn-ghost"%>
   </div>
 
 
-  <% @flats.each do |flat| %>
-    <div class="row">
-      <h3 class="mt-5"><%=flat.name %></h3> <%= link_to "See this flat", flat_path(flat) %>
-      <ul>
-        <li>Location: <%= flat.address %></li>
-        <li>Description: <%= flat.description %></li>
-        <li>Price per night:<%= flat.price_per_night %></li>
-        <li>Number of guests: <%= flat.number_of_guests %></li>
-      </ul>
-    </div>
-  <% end %>
+
+
+
 
 
 </div>
