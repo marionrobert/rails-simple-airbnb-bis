@@ -52,3 +52,34 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 4px 4px;
+  border-radius: 6px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  max-width: 200px;
+  text-align: center;
+
+}
+
+a.btn-ghost {
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: #4A4A4A;
+}
+
+a.card-flat {
+  text-decoration: none;
+  color: black;
+}
+
+.card-flat {
+  height: 300px;
+}
