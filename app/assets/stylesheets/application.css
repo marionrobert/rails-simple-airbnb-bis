@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  */
- .navbar-lewagon {
+
+
+/*navbar */
+.navbar-lewagon {
   justify-content: space-between;
   background: #F4F4F4;
 }
@@ -26,6 +29,7 @@
   width: 40px;
 }
 
+/*footer */
 .footer {
   background: #F4F4F4;
   display: flex;
@@ -53,6 +57,7 @@
   color: #D23333;
 }
 
+/*buttons */
 .btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
@@ -75,6 +80,8 @@ a.btn-ghost {
   color: #4A4A4A;
 }
 
+
+/*cards */
 a.card-flat {
   text-decoration: none;
   color: black;
