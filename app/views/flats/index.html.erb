@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row mt-5 mb-3">
+    <h2 >All our <%= @flats.count %> flats</h2>
+  </div>
+
+  <div class="row">
+    <%= link_to "Create a new flat", new_flat_path %>
+  </div>
+
+
+  <% @flats.each do |flat| %>
+    <div class="row">
+      <h3 class="mt-5"><%=flat.name %></h3> <%= link_to "See this flat", flat_path(flat) %>
+      <ul>
+        <li>Location: <%= flat.address %></li>
+        <li>Description: <%= flat.description %></li>
+        <li>Price per night:<%= flat.price_per_night %></li>
+        <li>Number of guests: <%= flat.number_of_guests %></li>
+      </ul>
+    </div>
+
+  <% end %>
+
+
+</div>

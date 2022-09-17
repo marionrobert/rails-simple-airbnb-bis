@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div class="row justify-content-center">
+    <div class="col-4 mt-5">
+      <h2 class="mb-3">Register a new flat</h2>
+      <%= simple_form_for @flat do |f| %>
+        <%= f.input :name, :label => 'Name' %>
+        <%= f.input :address, :placeholder => 'Where is your flat ?' %>
+        <%= f.input :description, :placeholder => 'Add a description to seduce the futur tenants'  %>
+        <%= f.input :price_per_night, :hint => "How much do you want to rent out your flat ? Give a price per night." %>
+        <%= f.input :number_of_guests, :label => "Maximum number of guests" %>
+        <%= f.button :submit, "Create your flat", :class => "btn-secondary" %>
+      <% end %>
+    </div>
+
+  </div>
+</div>

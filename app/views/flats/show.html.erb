@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div class="row mt-5">
+    <h2><%= @flat.name%></h2>
+
+    <p><i class="fa-solid fa-location-dot"></i> - <%= @flat.address %></p>
+    <p>Description: <%= @flat.description %></p>
+    <p>Price per night: <%= @flat.price_per_night %> $</p>
+    <p>Number of guests: <%= @flat.number_of_guests %></p>
+
+    <%= link_to "Edit the flat", edit_flat_path(@flat), data: { method: :edit }  %>
+
+    <%= link_to flat_path(@flat),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  do%>
+      <i class="fa-solid fa-trash-can"></i>
+    <% end %>
+
+    <%= link_to "See all the flats", flats_path %>
+  </div>
+</div>
