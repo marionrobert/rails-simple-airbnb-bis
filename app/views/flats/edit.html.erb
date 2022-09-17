@@ -1,8 +1,8 @@
 <div class="container">
 
   <div class="row justify-content-center">
-    <div class="col-4 mt-5">
-      <h2 class="mb-3">Edit <%= @flat.name %> </h2>
+    <div class="col-4 mt-2 mb-3">
+      <h2 class="mb-3">Edit your flat </h2>
       <%= simple_form_for @flat do |f| %>
         <%= f.input :name, :label => 'Name' %>
         <%= f.input :address, :placeholder => 'Where is your flat ?' %>
